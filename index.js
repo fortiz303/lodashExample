@@ -1,9 +1,18 @@
 const _ = require('lodash');
+const fs = require('fs');
 
-let myChunk = _.chunk([2,3,4,5],2);
-console.log(myChunk)
+// fs.readFile();
+// fs.readFileSync();
 
-console.log(_.random(1,10));
+// fs.writeFile();
+// fs.writeFileSync();
 
-console.log('hello world');
+let contents = fs.readFileSync('sample.txt','utf8');
+
+let dataToWrite = contents + '\nI was added to the previous text';
+
+fs.writeFileSync('sample.txt', contents +  '\n hi there i was added by JS','utf8');
+
+fs.writeFileSync('../outside.txt', 'hello world', 'utf8');
+
 
