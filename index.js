@@ -1,9 +1,17 @@
 const _ = require('lodash');
 
-let myChunk = _.chunk([2,3,4,5],2);
-console.log(myChunk)
+let myCompact = _.compact([0,3,false,'',5]);
+console.log(myCompact);
 
-console.log(_.random(1,10));
+let myChunk = _.chunk([2,3,4,8,5],2);
+console.log(myChunk);
 
-console.log('hello world');
+let myDifference = _.difference([2,8], [2,8]);
+console.log(myDifference);
+
+let differenceBy = _.differenceBy([3,4],[2,3],Math.floor);
+console.log(differenceBy);
+
+let drop = _.drop([1,2,3],2);
+console.log(drop);
 
