@@ -1,17 +1,17 @@
 const _ = require('lodash');
+const fs = require('fs')
 
-let myCompact = _.compact([0,3,false,'',5]);
-console.log(myCompact);
+// fs.readFile();
+// fs.readFileSync();
 
-let myChunk = _.chunk([2,3,4,8,5],2);
-console.log(myChunk);
+// fs.writeFile();
+// fs.writeFileSync();
 
-let myDifference = _.difference([2,8], [2,8]);
-console.log(myDifference);
+let contents = fs.readFileSync('sample.txt','utf8');
 
-let differenceBy = _.differenceBy([3,4],[2,3],Math.floor);
-console.log(differenceBy);
+let dataToWrite = contents + '\nI was added to the previous text';
 
-let drop = _.drop([1,2,3],2);
-console.log(drop);
+fs.writeFileSync('sample.txt', contents +  '\n hi there i was added by JS','utf8');
+
+fs.writeFileSync('../outside.txt', 'hello world', 'utf8');
 

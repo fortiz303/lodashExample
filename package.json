@@ -9,6 +9,7 @@
   "author": "Francisco",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "n-readlines": "^1.0.0"
   }
 }
